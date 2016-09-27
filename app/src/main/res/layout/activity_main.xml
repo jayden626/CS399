@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/expression"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="@string/app_name" />
+
+    <android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="4"
+    app:columnCount="4"
+    app:rowCount="5">
+
+    <!--EditText android:id="@+id/edit_message"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message" /-->
+
+    <Button
+        android:text="@string/clear"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="C"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/delete"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="D"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/divide"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="÷"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="x"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/seven"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="7"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/eight"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="8"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/nine"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="9"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/subtract"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="-"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/four"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="4"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/five"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="5"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/six"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="6"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/add"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="+"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/one"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="1"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/two"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="2"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/three"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="3"
+        android:onClick="sendMessage" />
+
+    <Button
+        app:layout_rowSpan="2"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/evaluate"
+        android:tag="="
+        android:onClick="sendMessage" />
+
+    <Button
+        app:layout_columnSpan="2"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/zero"
+        android:tag="0"
+        android:onClick="sendMessage" />
+
+    <Button
+        android:text="@string/decimal"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:tag="0"
+        android:onClick="sendMessage" />
+
+</android.support.v7.widget.GridLayout>
+</LinearLayout>
