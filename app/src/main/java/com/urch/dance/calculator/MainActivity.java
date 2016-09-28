@@ -1,5 +1,6 @@
 package com.urch.dance.calculator;
 
+import android.app.Application;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fathzer.soft.javaluator.DoubleEvaluator;
 //import com.urch.dance.calculator.JCalc.JCalcList;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     boolean evaluated;
     boolean lastIsOp;
     boolean decimalExists;
+    Toast toast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,11 +83,16 @@ public class MainActivity extends AppCompatActivity {
                 result = "";
                 expression += tag;
                 evaluated = false;
-            }
-            else if (expression.length() == 0 && tag.compareTo("-") != 0 && (tagIsOp || tag.compareTo("=") == 0)){
+            } else if(expression.length() >= 100) {
+                if(toast != null){
+                    toast.cancel();
+                }
+                toast = Toast.makeText(getApplicationContext(), getString(R.string.max), Toast.LENGTH_SHORT);
+                toast.show();
+
+            } else if (expression.length() == 0 && tag.compareTo("-") != 0 && (tagIsOp || tag.compareTo("=") == 0)){
                 //Do nothing as these operators are illegal at the start of the expression
-            }
-            else if (tag.compareTo("=") == 0 && expression.length() > 0) {
+            } else if (tag.compareTo("=") == 0 && expression.length() > 0) {
                 evaluated = true;
 
                 //If the last input was an operator, remove it.

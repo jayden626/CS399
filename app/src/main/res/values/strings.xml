@@ -20,4 +20,5 @@
     <string name="clear">C</string>
     <string name="delete">DEL</string>
     <string name="error">ERROR</string>
+    <string name="max">Maximum expression size reached (100 characters)</string>
 </resources>
